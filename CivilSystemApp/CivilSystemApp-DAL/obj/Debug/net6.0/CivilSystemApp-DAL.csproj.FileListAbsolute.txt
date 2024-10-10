@@ -1,0 +1,14 @@
+D:\YazanGitHub\CivilSystemApp\CivilSystemApp-DAL\bin\Debug\net6.0\CivilSystemApp-DAL.deps.json
+D:\YazanGitHub\CivilSystemApp\CivilSystemApp-DAL\bin\Debug\net6.0\CivilSystemApp-DAL.runtimeconfig.json
+D:\YazanGitHub\CivilSystemApp\CivilSystemApp-DAL\bin\Debug\net6.0\CivilSystemApp-DAL.dll
+D:\YazanGitHub\CivilSystemApp\CivilSystemApp-DAL\bin\Debug\net6.0\CivilSystemApp-DAL.pdb
+D:\YazanGitHub\CivilSystemApp\CivilSystemApp-DAL\obj\Debug\net6.0\CivilSystemApp-DAL.csproj.AssemblyReference.cache
+D:\YazanGitHub\CivilSystemApp\CivilSystemApp-DAL\obj\Debug\net6.0\CivilSystemApp-DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\YazanGitHub\CivilSystemApp\CivilSystemApp-DAL\obj\Debug\net6.0\CivilSystemApp-DAL.AssemblyInfoInputs.cache
+D:\YazanGitHub\CivilSystemApp\CivilSystemApp-DAL\obj\Debug\net6.0\CivilSystemApp-DAL.AssemblyInfo.cs
+D:\YazanGitHub\CivilSystemApp\CivilSystemApp-DAL\obj\Debug\net6.0\CivilSystemApp-DAL.csproj.CoreCompileInputs.cache
+D:\YazanGitHub\CivilSystemApp\CivilSystemApp-DAL\obj\Debug\net6.0\CivilSystemApp-DAL.dll
+D:\YazanGitHub\CivilSystemApp\CivilSystemApp-DAL\obj\Debug\net6.0\refint\CivilSystemApp-DAL.dll
+D:\YazanGitHub\CivilSystemApp\CivilSystemApp-DAL\obj\Debug\net6.0\CivilSystemApp-DAL.pdb
+D:\YazanGitHub\CivilSystemApp\CivilSystemApp-DAL\obj\Debug\net6.0\CivilSystemApp-DAL.genruntimeconfig.cache
+D:\YazanGitHub\CivilSystemApp\CivilSystemApp-DAL\obj\Debug\net6.0\ref\CivilSystemApp-DAL.dll
