@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CivilSystemApp-ApiLayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e29c8cb03390567a2c34a1dedbc326f6d9867ed8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c89241652208ecc49ba4c2a5c298f003b3c775fc")]
 [assembly: System.Reflection.AssemblyProductAttribute("CivilSystemApp-ApiLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CivilSystemApp-ApiLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

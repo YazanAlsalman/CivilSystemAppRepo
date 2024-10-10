@@ -7,15 +7,14 @@ using System.Threading.Tasks;
 
 namespace CivilSystemApp_DAL.Entities
 {
-    public class Citizen
+    public class Citizen : EntityBase
     {
         #region Properties
-        public int Id { get; set; }
         public string Name { get; set; }
+        public string Nationality { get; set; }
         public DateTime BirthDate { get; set; }
         public CitizenGenderEnum Gender { get; set; }
         public byte[]? AttachmentData { get; set; }
-        public bool IsDeleted { get; internal set; }
         #endregion
     }
 }

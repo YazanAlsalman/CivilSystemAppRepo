@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CivilSystemApp-ApiLayer", "CivilSystemApp-ApiLayer\CivilSystemApp-ApiLayer.csproj", "{C78A3F0B-4A37-47DE-9ADB-115E538E86EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CivilSystemApp-ApiLayer", "CivilSystemApp-ApiLayer\CivilSystemApp-ApiLayer.csproj", "{C78A3F0B-4A37-47DE-9ADB-115E538E86EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CivilSystemApp-DAL", "CivilSystemApp-DAL\CivilSystemApp-DAL.csproj", "{17C1AABC-4EFC-4E27-A62F-008835B9070B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CivilSystemApp-DAL", "CivilSystemApp-DAL\CivilSystemApp-DAL.csproj", "{17C1AABC-4EFC-4E27-A62F-008835B9070B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

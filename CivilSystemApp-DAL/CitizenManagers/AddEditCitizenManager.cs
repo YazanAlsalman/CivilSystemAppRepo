@@ -32,9 +32,11 @@ namespace CivilSystemApp_DAL.CitizenManagers
             {
                 var newCitizen = new Citizen();
                 newCitizen.Name = citizen.Name;
+                newCitizen.Nationality = citizen.Nationality;
                 newCitizen.BirthDate = citizen.BirthDate;
                 newCitizen.Gender = citizen.Gender;
                 newCitizen.AttachmentData = citizen.AttachmentData;
+                newCitizen.CreatedDate = DateTime.Now;
                 await _civilContext.Citizens.AddAsync(newCitizen);
                 await _civilContext.SaveChangesAsync();
             }
@@ -44,9 +46,11 @@ namespace CivilSystemApp_DAL.CitizenManagers
                 if (existingCitizen != null)
                 {
                     existingCitizen.Name = citizen.Name;
+                    existingCitizen.Nationality = citizen.Nationality;
                     existingCitizen.BirthDate = citizen.BirthDate;
                     existingCitizen.Gender = citizen.Gender;
                     existingCitizen.AttachmentData = citizen.AttachmentData;
+                    existingCitizen.ModifiedDate = DateTime.Now;
                     _civilContext.Citizens.Update(existingCitizen);
                     await _civilContext.SaveChangesAsync();
                 }
@@ -62,6 +66,7 @@ namespace CivilSystemApp_DAL.CitizenManagers
             if (citizen != null)
             {
                 citizen.IsDeleted = true;
+                citizen.DeletedDate = DateTime.Now;
                 await _civilContext.Citizens.AddAsync(citizen);
                 await _civilContext.SaveChangesAsync();
             }
