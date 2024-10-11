@@ -1,0 +1,35 @@
+
+.citizen-item {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+  }
+
+  .citizen-details span {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .h-38rem{
+    height: 38rem;
+  }
+
+  .full-width{
+    width: -webkit-fill-available;
+  }
+
+  .mr-2px{
+    margin-right: 2px;
+  }
+
+  .mr-8px{
+    margin-right: 2px;
+  }
+
+  .blur-background {
+    filter: blur(5px);
+    pointer-events: none; /* Prevent clicking on the background while the dialog is open */
+  }
+
+  .yazan-border {
+    border-style: dashed;
+  }

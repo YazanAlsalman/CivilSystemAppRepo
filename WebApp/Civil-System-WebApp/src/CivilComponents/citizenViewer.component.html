@@ -1,0 +1,70 @@
+<div class="mt-4">
+    <div [ngClass]="{'blur-background': addEditDialogShown}">
+        <div class="d-flex justify-content-between">
+            <h2>Citizens Data</h2>
+            <button class="btn btn-primary btn-sm mr-2px mb-1" (click)="showAddEditDialog(null,1)">Add(+)</button>
+        </div>
+        <!-- Header row -->
+        <div class="row font-weight-bold bg-dark text-white p-2" >
+        <div class="col-2">Name</div>
+        <div class="col-2">Nationality</div>
+        <div class="col-4">BirthDate</div>
+        <div class="col-1">Gender</div>
+        <div class="col-2">Actions</div>
+        </div>
+        <div class=" h-38rem">
+            <!-- Data rows -->
+            <div *ngFor="let citizen of citizens" class="row border-bottom p-2 align-items-center">
+            <div class="col-2"><span>{{ citizen.name }}</span></div>
+            <div class="col-2"><span>{{ citizen.nationality }}</span></div>
+            <div class="col-4"><span>{{ citizen.birthDate | date }}</span></div>
+            <div class="col-1"><span>{{ citizen.gender }}</span></div>
+            <div class="col-2">
+                <button class="btn btn-primary btn-sm mr-2px" (click)="showAddEditDialog(citizen,2)">Edit</button>
+                <button class="btn btn-danger btn-sm mr-2px" (click)="deleteCitizen(citizen)">Delete</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="addEditDialogShown" class="container mt-4 yazan-border"
+        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; background-color: white; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
+        <h2>Add/Edit Citizen</h2>
+      
+        <div class="border p-3" style="max-width: 400px;">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter name" [(ngModel)]="tempCitizen.name" name="name">
+            </div>
+      
+            <div class="mb-3">
+              <label for="nationality" class="form-label">Nationality</label>
+              <input type="text" class="form-control" id="nationality" placeholder="Enter nationality" [(ngModel)]="tempCitizen.nationality" name="nationality">
+            </div>
+      
+            <div class="mb-3">
+              <label for="birthDate" class="form-label">Birth Date</label>
+              <input type="date" class="form-control" id="birthDate" [(ngModel)]="tempCitizen.birthDate" name="birthDate">
+            </div>
+      
+            <div class="mb-3">
+              <label for="gender" class="form-label">Gender</label>
+              <select class="form-select" id="gender" [(ngModel)]="tempCitizen.gender" name="gender">
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+              </select>
+            </div>
+      
+            <div class="mb-3">
+                <label for="attachment" class="form-label">Upload Attachment (PDF/Word)</label>
+                <input type="file" class="form-control" id="attachment" (change)="onFileSelected($event)">
+              </div>
+
+            <button (click)="addEditCitizen(tempCitizen,operationType)" class="btn btn-primary mr-8px">Save Changes</button>
+            <button (click)="addEditDialogShown = false" class="btn btn-danger">Cancel</button>
+          </form>
+        </div>
+      </div>
+      
+  </div>
+  

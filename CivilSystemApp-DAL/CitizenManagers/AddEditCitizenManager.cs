@@ -67,7 +67,7 @@ namespace CivilSystemApp_DAL.CitizenManagers
             {
                 citizen.IsDeleted = true;
                 citizen.DeletedDate = DateTime.Now;
-                await _civilContext.Citizens.AddAsync(citizen);
+                _civilContext.Citizens.Update(citizen);
                 await _civilContext.SaveChangesAsync();
             }
             return true;

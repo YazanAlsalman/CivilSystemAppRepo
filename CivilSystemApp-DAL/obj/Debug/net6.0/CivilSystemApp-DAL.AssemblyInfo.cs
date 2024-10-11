@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CivilSystemApp-DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c89241652208ecc49ba4c2a5c298f003b3c775fc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df57571f0f62afeab9c61f9bb49893475ddc0d73")]
 [assembly: System.Reflection.AssemblyProductAttribute("CivilSystemApp-DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CivilSystemApp-DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -108,7 +108,10 @@
     .pill:hover {
       background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
     }
-
+    
+    .full-width{
+    width: -webkit-fill-available;
+  }
   .pill-group .pill:nth-child(6n + 1) {
     --pill-accent: var(--bright-blue);
   }
@@ -143,15 +146,6 @@
       fill: var(--gray-900);
     }
 
-  .citizen-item {
-    background-color: #f8f9fa;
-    border-radius: 5px;
-  }
-
-  .citizen-details span {
-    display: block;
-    margin-bottom: 5px;
-  }
 
   @media screen and (max-width: 650px) {
     .content {
@@ -169,37 +163,14 @@
 </style>
 
 <main class="main">
-  <div class="">
+  <div class="full-width">
     <div class="left-side">
       <h1>Hello, {{ title }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
     </div>
     <!----------------------------------------------->
     <!--Table Section-->
-
-    <div class="mt-4">
-      <h2>Citizens Data</h2>
-
-      <div class="row font-weight-bold bg-dark text-white p-2">
-        <div class="col-2">Name</div>
-        <div class="col-2">Nationality</div>
-        <div class="col-4">BirthDate</div>
-        <div class="col-1">Gender</div>
-        <div class="col-2">Actions</div>
-      </div>
-
-      <!-- Data rows -->
-      <div *ngFor="let citizen of citizens" class="row border-bottom p-2 align-items-center">
-        <div class="col-2"><span>{{ citizen.Name }}</span></div>
-        <div class="col-2"><span>{{ citizen.Nationality }}</span></div>
-        <div class="col-4"><span>{{ citizen.BirthDate }}</span></div>
-        <div class="col-1"><span>{{ citizen.Gender }}</span></div>
-        <div class="col-2" >
-          <button class="btn btn-primary btn-sm " style="margin-right: 5px;" (click)="addEditCitizen(citizen)">Edit</button>
-          <button class="btn btn-danger btn-sm" style="margin-right: 5px;" (click)="deleteCitizen(citizen.id)">Delete</button>
-        </div>
-      </div>
-    </div>
+    <app-citizenViewer></app-citizenViewer>
     <!----------------------------------------------->
   </div>
 </main>

@@ -3,6 +3,7 @@ using CivilSystemApp_DAL.CitizenManagers;
 
 var builder = WebApplication.CreateBuilder(args);
 
+//in Future .. 
 // Add services to the container.
 //builder.Services.AddScoped<IProductService, ProductService>();
 
@@ -27,6 +28,7 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+app.UseCors("AllowAll");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
