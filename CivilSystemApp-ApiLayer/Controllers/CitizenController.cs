@@ -39,7 +39,7 @@ namespace CivilSystemApp_ApiLayer.Controllers
         }
 
         [HttpPost("AddEditCitizenData")]
-        public async Task<IActionResult> AddEditCitizenData(CitizenDto citizen)
+        public async Task<IActionResult> AddEditCitizenData([FromBody] CitizenDto citizen)
         {
             try
             {

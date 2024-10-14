@@ -22,12 +22,18 @@ namespace CivilSystemApp_DAL.CitizenManagers
         #region Manager Methods
         public async Task<List<Citizen>> GetCitizensData()
         {
-            var citizens = await _civilContext.Citizens.AsNoTracking().Where(c => !c.IsDeleted).ToListAsync();
+            var citizens = await _civilContext.Citizens.AsNoTracking().Where(c => !c.IsDeleted).OrderByDescending(u=>u.Id).ToListAsync();
             return citizens;
         }
 
         public async Task<bool> AddEditCitizenData(CitizenDto citizen)
         {
+            byte[] fileBytes = null;
+            if (!string.IsNullOrEmpty(citizen.AttachmentData))
+            {
+                fileBytes = Convert.FromBase64String(citizen.AttachmentData);
+                await System.IO.File.WriteAllBytesAsync("UploadedFile.pdf", fileBytes);
+            }
             if (citizen.Id != null && citizen.Id != null)
             {
                 var newCitizen = new Citizen();
@@ -35,7 +41,8 @@ namespace CivilSystemApp_DAL.CitizenManagers
                 newCitizen.Nationality = citizen.Nationality;
                 newCitizen.BirthDate = citizen.BirthDate;
                 newCitizen.Gender = citizen.Gender;
-                newCitizen.AttachmentData = citizen.AttachmentData;
+                newCitizen.AttachmentData = fileBytes;
+                newCitizen.AttachmentType = citizen.AttachmentType;
                 newCitizen.CreatedDate = DateTime.Now;
                 await _civilContext.Citizens.AddAsync(newCitizen);
                 await _civilContext.SaveChangesAsync();
@@ -49,7 +56,8 @@ namespace CivilSystemApp_DAL.CitizenManagers
                     existingCitizen.Nationality = citizen.Nationality;
                     existingCitizen.BirthDate = citizen.BirthDate;
                     existingCitizen.Gender = citizen.Gender;
-                    existingCitizen.AttachmentData = citizen.AttachmentData;
+                    existingCitizen.AttachmentData = fileBytes;
+                    existingCitizen.AttachmentType = citizen.AttachmentType;
                     existingCitizen.ModifiedDate = DateTime.Now;
                     _civilContext.Citizens.Update(existingCitizen);
                     await _civilContext.SaveChangesAsync();

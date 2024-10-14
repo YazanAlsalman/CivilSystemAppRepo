@@ -10,7 +10,7 @@ create table citizens
 	IsDeleted bit,
 	---------------
     Attachmentdata varbinary(max), 
-	AttachmentType int ,
+	AttachmentType nvarchar(10) ,
 	---------------
 	CreatedDate datetime not null,         
     ModifiedDate datetime null,         
@@ -19,6 +19,8 @@ create table citizens
 );
 
 --drop table citizens
+select * from citizens
+
 
 insert into citizens (Name, Nationality, Birthdate, Gender, IsDeleted, Attachmentdata, AttachmentType, CreatedDate, ModifiedDate, DeletedDate)
 values 

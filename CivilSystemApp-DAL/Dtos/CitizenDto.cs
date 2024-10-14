@@ -10,7 +10,8 @@ namespace CivilSystemApp_ApiLayer.Dtos
         public string Nationality { get; set; }
         public DateTime BirthDate { get; set; }
         public CitizenGenderEnum Gender { get; set; }
-        public byte[]? AttachmentData { get; set; }
+        public string AttachmentData { get; set; }
+        public string AttachmentType { get; set; }
         #endregion
     }
 }

@@ -19,9 +19,12 @@
             <div class="col-2"><span>{{ citizen.nationality }}</span></div>
             <div class="col-4"><span>{{ citizen.birthDate | date }}</span></div>
             <div class="col-1"><span>{{ citizen.gender }}</span></div>
-            <div class="col-2">
+            <div class="col-auto disable">
                 <button class="btn btn-primary btn-sm mr-2px" (click)="showAddEditDialog(citizen,2)">Edit</button>
                 <button class="btn btn-danger btn-sm mr-2px" (click)="deleteCitizen(citizen)">Delete</button>
+                <button [ngClass]="{'disabled': !citizen.attachmentType || !citizen.attachmentData}" class="btn btn-primary btn-sm mr-2px" (click)="viewAttachment(citizen.attachmentData, citizen.attachmentType)">
+                  View Attachment
+                </button>
             </div>
             </div>
         </div>
@@ -62,6 +65,7 @@
 
             <button (click)="addEditCitizen(tempCitizen,operationType)" class="btn btn-primary mr-8px">Save Changes</button>
             <button (click)="addEditDialogShown = false" class="btn btn-danger">Cancel</button>
+            
           </form>
         </div>
       </div>
